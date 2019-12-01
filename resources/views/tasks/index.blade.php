@@ -24,7 +24,7 @@
             </tbody>
         </table>
     @endif
-    
+    {{ $tasks->links('pagination::bootstrap-4') }}
     {!! link_to_route('tasks.create', 'New Task', [], ['class' => 'btn btn-primary']) !!}
 
 @endsection
