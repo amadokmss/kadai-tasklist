@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTitleToTasksTable extends Migration
+class AddStatusToTasksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,6 +16,7 @@ class AddTitleToTasksTable extends Migration
         Schema::table('tasks', function (Blueprint $table) {
             $table -> string("status",10);
             $table->integer('user_id')->unsigned()->index();
+            $table->string('jjj',10);
             
             $table->foreign('user_id')->references('id')->on('users');
         });
