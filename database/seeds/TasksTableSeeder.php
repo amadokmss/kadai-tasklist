@@ -11,10 +11,6 @@ class TasksTableSeeder extends Seeder
      */
     public function run()
     {
-    
-        DB::table('tasks')->insert([
-            'status' => 'test # ' . 1,
-            'content' => 'test content ' . 1
-        ]);
+        //
     }
 }
